@@ -24,7 +24,8 @@ namespace SimpleActiveWindowLogger.ActiveWindow
                     activeWindow.IsDifferentThan(currentActiveWindow, () =>
                     {
                         currentActiveWindow = ActiveWindowModel.CreateFrom(activeWindow);
-                        ActiveWindowChanged?.Invoke(this, ActiveWindowChangedEventArgs.Create(activeWindow.WindowTitle));
+                        ActiveWindowChanged?.Invoke(this,
+                            ActiveWindowChangedEventArgs.Create(activeWindow.WindowTitle));
                     }));
     }
 }
